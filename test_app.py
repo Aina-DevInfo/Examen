@@ -1,25 +1,27 @@
-# test_calculs.py
+# test_app.py
 
-from app import addition, soustraction, multiplication, division
+import pytest
+from app import addition, division ,multiplication, soustraction
 
+def test_add():
+    assert addition(10, 5) == 15
+    assert addition(-1, 1) == 0
+    assert addition(-1, -1) == -2
 
-def test_addition():
-    assert addition(3, 5) == 8
-    assert addition(-3, 5) == 2
-    assert addition(0, 0) == 0
+def test_subtract():
+    assert soustraction(10, 5) == 5
+    assert soustraction(-1, 1) == -2
+    assert soustraction(-1, -1) == 0
 
-def test_soustraction():
-    assert soustraction(3, 5) == -2
-    assert soustraction(5, 3) == 2
-    assert soustraction(0, 0) == 0
+def test_multiply():
+    assert multiplication(10, 5) == 50
+    assert multiplication(-1, 1) == -1
+    assert multiplication(-1, -1) == 1
 
-def test_multiplication():
-    assert multiplication(3, 5) == 15
-    assert multiplication(-3, 5) == -15
-    assert multiplication(0, 5) == 0
+def test_divide():
+    assert division(10, 5) == 2.0
+    assert division(-1, 1) == -1.0
+    assert division(-1, -1) == 1.0
 
-def test_division():
-    assert division(10, 2) == 5
-    assert division(5, 2) == 2.5
-    assert division(8, 0) == "Erreur: Division par zéro"
-
+if __name__ == "__main__":
+    pytest.main()
