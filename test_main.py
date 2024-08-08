@@ -1,6 +1,5 @@
 # test_calculs.py
 
-import pytest
 from main import addition, soustraction, multiplication, division
 
 def test_addition():
@@ -23,6 +22,3 @@ def test_division():
     assert division(5, 2) == 2.5
     assert division(8, 0) == "Erreur: Division par zéro"
 
-# Exécution des tests si ce fichier est exécuté directement
-if __name__ == "__main__":
-    pytest.main()
