@@ -1,12 +1,12 @@
 # test_calculs.py
 
-#from main import addition, soustraction, multiplication, division
-import main
+from main import addition, soustraction, multiplication, division
+
 
 def test_addition():
-    assert main.addition(3, 5) == 8
-"""    assert main.addition(-3, 5) == 2
-    assert main.addition(0, 0) == 0
+    assert addition(3, 5) == 8
+    assert addition(-3, 5) == 2
+    assert addition(0, 0) == 0
 
 def test_soustraction():
     assert soustraction(3, 5) == -2
@@ -23,4 +23,3 @@ def test_division():
     assert division(5, 2) == 2.5
     assert division(8, 0) == "Erreur: Division par zéro"
 
-"""
