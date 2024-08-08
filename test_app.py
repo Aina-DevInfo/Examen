@@ -1,6 +1,6 @@
 # test_calculs.py
 
-from main import addition, soustraction, multiplication, division
+from app import addition, soustraction, multiplication, division
 
 
 def test_addition():
